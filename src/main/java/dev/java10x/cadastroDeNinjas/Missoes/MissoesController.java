@@ -10,6 +10,10 @@ public class MissoesController {
     public String ListarMissoes(){
         return "Missao listadas com sucesso";
     }
+    @GetMapping("/listarId")
+    public String ListarMissoesId(){
+        return "Missao listadas por id com sucesso";
+    }
 
     @PostMapping("/criar")
     public String criarMissao(){
