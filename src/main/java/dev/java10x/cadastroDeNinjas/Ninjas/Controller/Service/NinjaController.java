@@ -24,10 +24,10 @@ public class NinjaController {
         return ninjaService.listarNinjas();
     }
 
-    @PostMapping("/criar")
-    public String criandoNinja(){
-        return "Criando ninja";
-    }
+        @PostMapping("/criar")
+        public NinjaModel criarNinja(@RequestBody NinjaModel ninja){
+            return ninjaService.criarNinja(ninja);
+        }
 
     @PutMapping("/alterarId")
     public String atualizarNinja(){
