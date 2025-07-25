@@ -38,7 +38,7 @@ public class MissoesService {
         return missoesMapper.map(missao);
     }
 
-    public void deletarNinja(Long id){
+    public void deletarMissao(Long id){
         missoesRepository.deleteById(id);
     }
 

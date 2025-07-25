@@ -24,7 +24,7 @@ public class MissoesModel {
 
 
 
-    @OneToMany(mappedBy = "missoes")
+    @OneToMany(mappedBy = "missoes", cascade = CascadeType.REMOVE, orphanRemoval = true)
     @JsonIgnore
     private List<NinjaModel> ninjas;
 
