@@ -1,5 +1,6 @@
 package dev.java10x.cadastroDeNinjas.Ninjas.Controller.Service;
 
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ public class NinjaController {
     }
 
     @GetMapping("/boasVindas")
+    @Operation(summary = "Mensagem de boas vindas", description = "Essa rota uma mensagem de boas vindas")
     public String boasVindas(){
         return "Boas vindas";
     }
@@ -46,7 +48,7 @@ public class NinjaController {
     }
 
     @GetMapping("/listar/{id}")
-    public ResponseEntity<?> listarNinjaPorId(@PathVariable Long id){
+        public ResponseEntity<?> listarNinjaPorId(@PathVariable Long id){
         NinjaDTO ninja = ninjaService.listarById(id);
         if ( ninja != null){
             return ResponseEntity.ok(ninja);
