@@ -14,4 +14,5 @@ O projeto utiliza **PostgreSQL** via **Docker** como banco de dados.
 - **PostgreSQL**
 - **Docker & Docker Compose**
 - **Lombok**
-- **MapStruct** (para mapeamento entre DTOs e entidades)
+- **MapStruct**
+- **FlyWay**
